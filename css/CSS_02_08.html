@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+       <title>가상요소로 콘텐츠 확장하기</title>
+ <style>
+
+     /*첫번째 버튼*/
+ .button {
+ display: inline-block;
+ padding: 20px 400px;
+ background-color: #3498db;
+ color: white;
+ text-decoration: none;
+ border-radius: 20px;
+ position: relative;
+ }
+
+ .button::before {
+ content: "";
+ display: inline-block;
+ width: 0;
+ height: 0;
+ border-left: 8px solid transparent;
+ border-right: 8px solid transparent;
+ border-bottom: 8px solid white;
+ margin-right: 8px;
+ vertical-align: middle;
+ }
+
+ .button::after {
+ content: "→";
+ margin-left: 8px;
+ font-weight: bold;
+ }
+ /*---------------------------------------------------*/
+     /*두번째버튼*/
+  .speech-bubble {
+ background-color: #f8f9fa;
+ border: 2px solid #dee2e6;
+ border-radius: 10px;
+ padding: 15px;
+ margin: 20px;
+ position: relative;
+ max-width: 300px;
+ }
+
+ .speech-bubble::after {
+ content: "";
+ position: absolute;
+ bottom: -12px;
+ left: 30px;
+ width: 0;
+ height: 0;
+ border-left: 12px solid transparent;
+ border-right: 12px solid transparent;
+ border-top: 12px solid #f8f9fa;
+ }
+
+ .speech-bubble::before {
+ content: "";
+ position: absolute;
+ bottom: -15px;
+ left: 28px;
+ width: 0;
+ height: 0;
+ border-left: 14px solid transparent;
+ border-right: 14px solid transparent;
+ border-top: 14px solid #dee2e6;
+ }
+
+/*----------------------------------------------------------*/
+     /*그리팅 클래스 손가락 */
+
+ .greeting {
+ font-size: 20px;
+ color: #333;
+ padding: 10px;
+ }
+
+ .greeting::before {
+ content: " 👉 ";
+ color: #ff6b6b;
+ }
+
+ .greeting::after {
+ content: " text ";
+ color: #4ecdc4;
+ }
+ </style>
+    <a href="#" class="button">다운로드</a>
+
+<div class="speech-bubble">
+ 가상 요소를 사용하면 이렇게 멋진 말풍선도 만들 수 있어요!
+</div>
+<div class="speech-bubble">
+ 핵심 포인트<br>
+- content 속성은 필수<br>
+- 순수 디자인 목적으로만 사용<br>
+- position과 함께 사용하면 더욱 강력함
+</div>
+</head>
+<body>
+ <p class="greeting">안녕하세요!</p>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* 특이도 1점 */
+h1 { color: blue; }
+
+/* 특이도 10점 */
+.title { color: green; }
+
+/* 특이도 100점 */
+#main-title { color: red; }
+
+/* 특이도 111점 (100 + 10 + 1) */
+#main-title.title h1 { color: purple; }

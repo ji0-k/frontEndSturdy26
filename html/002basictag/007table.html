@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    background-image: url('https://i.pinimg.com/1200x/e5/d5/af/e5d5af3c38af6dd867a1eee6ac03aba0.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  a {color: black;
+    text-decoration: underline;
+    text-decoration-color: black;}
+a:hover {text-decoration-color: gray;}
+  nav {background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;}
+
+   table {
+ border-collapse: collapse; /* 경계선을 하나로 합침 */
+ width: 80%;
+ margin: 20px 0;
+ }
+
+ th, td {
+ border: 1px solid #ddd;
+ padding: 12px;
+ text-align: left;
+ }
+
+ th {
+ background-color: gray;
+ color: white;
+ font-weight: bold;
+ }
+
+ tr:nth-child(even) {
+ background-color: AccentColor; /* 짝수 행에 배경색 현재는 채우기없음*/
+ }
+
+ tr:hover {
+ background-color: accentcolor; /* 마우스 올렸을 때 */
+ }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>테이블로데이터체게정리</title>
+</head>
+<body>
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;핵심개념</h2>
+<ul>
+    <li>< table> : 전체 테이블을 감싸는 컨테이너(골조역할)</li>
+    <li>< thead> : 테이블 머리글 영역 , 제목 행들을 묶어줌</li>
+    <li>< tbody> : 테이블 본문 , 실제 데이터들어가는곳</li>
+    <li>< tr> : table row , 테이블의 한 행</li>
+    <li>< th> : table header , 제목 셀 , 굵게 표시되고 가운데 정렬</li>
+    <li>< td> : table data , 일반 데이터 셀</li>
+</ul>
+     <p>의미론적으로 명확한 구조르 만들어 스크린 리더나 검색엔진이 데이터의 관계를 정확하게 파악하기위함</p>
+<br>
+
+
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팀 프로젝트 현황</h1>
+
+ <table>
+ <thead><!--테이블 머리글, 제목 행묶어줌-->
+ <tr><!--table row-->
+ <th>프로젝트명</th><!--table header-->
+ <th>담당자</th><!--table header-->
+ <th>진행률</th><!--table header-->
+ <th>마감일</th><!--table header-->
+ </tr><!--table row-->
+ </thead>
+ <tbody><!--table본문-->
+ <tr><!--table row-->
+ <td>쇼핑몰 웹사이트</td><!--table data-->
+ <td>김개발</td><!--table data-->
+ <td>75%</td><!--table data-->
+ <td>2024-03-15</td><!--table data-->
+ </tr><!--table row-->
+ <tr><!--table row-->
+ <td>모바일 앱 UI</td><!--table data-->
+ <td>이디자인</td><!--table data-->
+ <td>90%</td><!--table data-->
+ <td>2024-03-10</td><!--table data-->
+ </tr><!--table row-->
+ <tr><!--table row-->
+ <td>데이터베이스 설계</td><!--table data-->
+ <td>박멘토</td><!--table data-->
+ <td>60%</td><!--table data-->
+ <td>2024-03-20</td><!--table data-->
+ </tr><!--table row-->
+ </tbody><!--테이블본문 끝-->
+ </table><!--테이블끝-->
+
+<br>
+<br>
+<br>
+<table>
+ <thead>
+ <tr>
+ <th rowspan="2">프로젝트명</th><!--열병합 2칸-->
+ <th colspan="2">진행 현황</th><!--행병합 2칸-->
+ <th rowspan="2">비고</th><!--열병합 2칸-->
+ </tr>
+ <tr>
+ <th>완료율</th>
+ <th>남은 일수</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>쇼핑몰 웹사이트</td>
+ <td>75%</td>
+ <td>5일</td>
+ <td>순조롭게 진행 중</td>
+ </tr>
+ <tr>
+ <td>모바일 앱 UI</td>
+ <td>90%</td>
+ <td>2일</td>
+ <td>마감 임박</td>
+ </tr>
+ </tbody>
+</table>
+
+<h3>핵심포인트</h3>
+<ol>
+ <li>< table> 안에 < thead>와 < tbody>로 구조화</li>
+ <li>제목은 < th>, 데이터는 < td> 사용</li>
+ <li>colspan, rowspan으로 셀 병합 가능</li></ol>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <meta charset="UTF-8">
+<style>
+  body {
+    /* 배경 이미지 설정 */
+    background-image: url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
+
+    /* 배경 이미지가 화면을 꽉 채우도록 설정 */
+    background-size: cover;
+
+    /* 화면 스크롤 시 배경은 고정 */
+    background-attachment: fixed;
+
+    /* 배경 이미지 반복 방지 */
+    background-repeat: no-repeat;
+
+    /* 배경 이미지 중앙 정렬 */
+    background-position: center;
+
+    /* 스타일 주석: 글씨가 잘 보이게 흰색으로 설정 */
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+a:hover {
+  text-decoration-color: gray;
+}
+
+  /* 네비게이션 바가 배경 위에서도 잘 보이도록 약간 투명하게 설정 */
+  nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+  }
+</style>
+ <h3>'WWW'</h3>
+    <p>웹이 World Wide Web이라고 불리는 이유는 바로 링크(Link) 때문입니다.<br>
+   거미줄처럼 모든 웹페이지가 서로 연결되어 있어서 사용자가 자유롭게 이동할 수 있죠.</p>
+ <h3>'a 닻'</h3>
+    <p>HTML에서 링크를 만드는 태그가 바로 < a > 태그입니다. 'a'는 'anchor(닻)'의 줄임말로, <br>
+     배가 항구에 닻을 내리듯 특정 위치로 이동할 수 있게 해준다는 의미입니다.</p>
+    <p> < a href="이동할 주소" > 클릭할 텍스트 < /a > <br>
+ <h3>'href'</h3>
+    <p>'hypertext reference'의 줄임말로, "어디로 이동할 것인가"를 지정합니다.</p>
+
+ <h3>'링크의 종류'</h3>
+ <ol>
+   <li> 외부 링크: 다른 웹사이트로 이동 (https://www.google.com)</li>
+   <li>내부 링크: 같은 사이트 내 다른 페이지로 이동 (about.html)</li>
+   <li>앵커 링크: 같은 페이지 내 특정 위치로 이동 (#section1)</li>
+ </ol>
+
+<h3>'기본링크만들기'</h3>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>web.link</title>
+</head>
+<body>
+ <h1> 코드 꿈나무의 인스타그램 </h1>
+ <p> 인스타그램을 구경하시려면 <a href="https://www.instagram.com/ji0000092?igsh=YzduY3JzcWs4ZDRy">여기</a>를 클릭하세요.</p>
+
+ <h2>유용한 사이트들</h2>
+ <ul>
+ <li><a href="https://www.naver.com">네이버</a></li>
+ <li><a href="https://www.daum.net">다음</a></li>
+ <li><a href="https://www.youtube.com">유튜브</a></li>
+ </ul>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>요즘 자주 쓰는 </title>
+</head>
+<body>
+<style>
+  /* 스타일 주석: 리스트의 기본 점(dot)을 없애고 가로로 정렬합니다 */
+  nav ul {
+    display: flex;       /* 가로 정렬 시작 */
+    list-style: none;    /* 불릿 기호 삭제 */
+    padding: 0;
+  }
+
+  nav li {
+    margin-right: 40px;  /* 메뉴 사이 간격 조절 */
+  }
+
+/*  nav a {
+    text-decoration: none; !* 링크 밑줄 제거 *!
+    color: #333;
+  }*/
+</style>
+ <nav>
+ <ul>
+ <li><a href="https://kr.pinterest.com/">핀터레스트</a></li>
+ <li><a href="https://gemini.google.com/app/l">제미나이</a></li>
+ <li><a href="https://chatgpt.com/l">챗지피티</a></li>
+ <li><a href="https://claude.ai/">클로드</a></li>
+ </ul>
+ </nav>
+
+ <h3>어어아앙아ㅏㅇ아아</h3>
+ <p><a href="https://www.instagram.com/ji0000092?igsh=YzduY3JzcWs4ZDRy">인스타그램</a>를 먼저 읽어보시기 바랍니다.</p>
+</body>
+</html>
+
+<h4 id="nav"> "< nav >는??"</h4>
+ <p>**Navigation(네비게이션)**의 약자로,<br>
+   웹사이트 내의 다른 페이지나 현재 페이지의 다른 부분으로 이동할 수 있는 <br>
+   **메뉴(링크 모음)**를 감싸는 태그입니다.</p>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>긴 문서 예제</title>
+</head>
+<body>
+ <h1>목차</h1>
+ <ul>
+ <li><a href="#intro">소개</a></li><!--이거 누르면 아래 소개섹션으로 연결-->
+ <li><a href="#features">특징</a></li>
+ <li><a href="#contact">연락처</a></li>
+ </ul>
+
+ <h2 id="intro">소개</h2>
+ <p>여기는 소개 섹션입니다...</p>
+
+ <h2 id="features">특징</h2>
+ <p>여기는 특징 섹션입니다...</p>
+
+ <h2 id="contact">연락처</h2>
+ <p>여기는 연락처 섹션입니다...</p>
+
+ <p><a href="#top">맨 위로 이동</a></p>
+</body>
+</html>
+
+ <br>
+ <br>
+ <br>
+ <h3> 앵커링크</h3>
+ <h3> id 속성으로 이동할 위치 지정 id="위치이름"<br>
+      href="#id위치이름" 으로<br>
+      <a href="#nav">nav복습하기</a></h3>
+<br>
+<br>
+<br>
+
+<div style="background-image: url('https://i.pinimg.com/1200x/9b/05/8f/9b058f9fd94db849135092d38666b8d3.jpg');
+width: 800px; height: 600px; background-size: cover;">
+  </div>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+
+<div style="background-image: url('https://i.pinimg.com/736x/5f/59/af/5f59af895a4db5429c7946d610236b99.jpg');
+width: 800px; height: 600px; background-size: cover;">
+  </div>
+<br>
+<br>
+<br>
+<br>
+<ol>
+  <p>  핵심 내용 요약 </p>
+  <li> < a href="주소">텍스트< /a>: 기본 링크 문법 </li>
+<li> 외부 링크: https://로 시작하는 완전한 URL</li>
+<li> 내부 링크: 파일명만 작성 (about.html)</li>
+<li> 앵커 링크: #id명으로 페이지 내 이동</li>
+</ol>
