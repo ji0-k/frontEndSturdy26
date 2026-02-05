@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport : 반응형 웹용 필수 코드 -->
+    <!--웹 페이지는 pc/노트북/태블릿/스마트폰 등으로 해상도가 다름-->
+    <!--그냥 복붙해서 쓰는거-->
+ <title>개발자 도구 실습</title>
+ <style>/*꾸미깅*/
+ body {/*태그 저체에 적용되는 스타일*/
+ font-family: Arial, sans-serif; /*글꼴들 가족, 1안폰트 없으면 2안폰트 사용*/
+ margin: 20px; /*여백*/
+ }
+ .highlight {/*앞ㅇㅔ .이있으면 클래스, 클래스에 적용되는 스타일*/
+ background-color: green;
+ padding: 10px; /*여백*/
+ border-radius: 400px; /*반원*/
+ }
+ button {/*버튼에 적용되는 스타일*/
+ background-color: #007bff;
+ color: white;
+ padding: 10px 50px;
+ border: none;
+ border-radius: 300px;
+ cursor: pointer;
+ }
+ button:hover { /*버튼올렸을때 스타일 설정*/
+ background-color: #0056b3;
+ }
+ </style>
+</head>
+<body>
+ <h1>개발자 도구 실습 페이지</h1>
+ <p class="highlight">이 텍스트는 초록초록초록 배경을 가지고 있습니다.</p>
+ <button onclick="alert('누르지마!')">누르지마세요</button>
+ <!-- 스타일이 button{}가 적용된다-->
+ <!-- 마우스가 올라갔을때 -->
+ <ul>
+ <li>첫 번째 항목</li>
+ <li>두 번째 항목</li>
+ <li>세 번째 항목</li>
+ </ul>
+</body>
+</html>
+

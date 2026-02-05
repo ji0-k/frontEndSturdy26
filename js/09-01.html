@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>JavaScript 상호작용</title>
+ <style>
+ body { font-family: Arial, sans-serif; padding: 20px; } /*글꼴,여유*/
+ button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+ #result { margin-top: 20px; padding: 15px; border: 2px solid #007bff; border-radius: 5px; }
+ </style>
+</head>
+<body>
+ <h2>JavaScript와 함께하는 간단한 게임</h2> <!--제목-->
+
+ <button onclick="askName()">이름 물어보기</button> <!--버튼 클릭하면 askName함수돌려-->
+ <button onclick="guessNumber()">숫자 맞추기</button><!--아래쪽 function 호출-->
+ <button onclick="showTime()">현재 시간 보기</button>
+
+ <div id="result"></div>
+
+ <script>
+ function askName() {
+ let name = prompt("당신의 이름을 알려주세요!"); /*let은 변수 선언시 사용 , let name은 prompt창이 떠서 받은 값 선언*/
+ if (name) { //name에 값이있으면 true이고 그 값을 가지고 result에 HTML에 넣어라
+ document.getElementById('result').innerHTML =
+ `안녕하세요, ${name}님! JavaScript와 함께 즐거운 시간 보내세요!`;
+ //         ${}표현식 : 변수값을 출력
+ }
+ }
+
+ function guessNumber() {
+ let randomNumber = Math.floor(Math.random() * 10) + 1;
+            //공식 암기 : 1-10숫자를 랜덤 생성
+            // math.random()은 초sec를 기준으로 값을 생성
+//로또 번호 생성용 랜덤 코드 (Math.random() * 45)+1;
+ let userGuess = prompt("1부터 10까지 숫자 중 하나를 맞춰보세요!");
+
+
+ if (userGuess == randomNumber) {
+ document.getElementById('result').innerHTML =
+ `정답입니다! 숫자는 ${randomNumber}였어요!`;
+ }
+ else {
+ document.getElementById('result').innerHTML =
+ `아쉽네요! 정답은 ${randomNumber}였어요. 당신이 선택한 숫자는 ${userGuess}였습니다.`;
+ }
+ }
+
+ function showTime() {
+ let now = new Date();
+ let timeString = now.toLocaleString('ko-KR');
+ // 한국 시간으로 변경
+ document.getElementById('result').innerHTML =
+ `컴퓨터 변환 전 시간 ${now}<br> 현재시간(한국변환시간) : ${timeString}`;
+ }
+ </script>
+</body>
+</html>

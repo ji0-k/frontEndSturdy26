@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 실습</title>
+    <link rel = "stylesheet" href="../css/CSS_02_04.CSS.css">
+    <style>
+        /* 여기에 CSS를 작성할 예정 */
+    </style>
+</head>
+<body>
+    <h1 id="main-title">웹 개발 학습 일지</h1>
+    <h2>오늘의 학습 내용</h2>
+    <p class="highlight">CSS 선택자는 정말 중요합니다!</p>
+    <p>다양한 선택자를 배워보겠습니다.</p>
+    <div class="highlight">
+        <span>이 부분도 강조되어야 합니다.</span>
+    </div>
+    <ul>
+        <li>전체 선택자</li>
+        <li>타입 선택자</li>
+        <li class="highlight">클래스 선택자</li>
+        <li>ID 선택자</li>
+    </ul>
+    <br>
+    <br>
+    <h2>4가지 기본 선택자의 특징</h2>
+<ol>
+    <li>
+        1. 전체 선택자 (*)/우선순위 가장낮음</li>
+- 모든 요소를 선택하는 만능 도구
+- 마치 "전교생 집합!"과 같은 개념
+
+
+    <li>2. 타입 선택자 (태그명)/우선순위 낮음</li>
+- 같은 종류의 모든 요소를 선택
+- "모든 제목(h1) 집합!" 같은 느낌
+
+    <li>3. 클래스 선택자 (.클래스명)/우선순위 높음</li>
+- 같은 클래스를 가진 요소들을 선택
+- "축구부 학생들 집합!" 처럼 그룹별 선택
+
+    <li>4. ID 선택자 (#아이디명)/우선순위 가장 높음</li>
+- 특정 ID를 가진 하나의 요소만 선택
+- "학번 20240001번 학생!" 처럼 개별 지정
+</ol>
+
+<p>선택자들은 구체성 우선순위를가짐 <br>
+</p>
+</body>
+</html>

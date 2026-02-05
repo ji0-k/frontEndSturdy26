@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>JavaScript 첫 걸음</title>
+</head>
+<body>
+ <h1>JavaScript와 함께하는 첫 번째 여행</h1>
+ <button onclick="sayHello()">누르지마</button><!-- on click 버튼을 눌렀을때-->
+ <p id="message"></p>
+
+ <script> //주석 : 자바스크립트 시작!
+
+ //함수를 생성한다
+ function sayHello() {
+   document.getElementById('message').innerHTML = '안녕하세요!<br> JavaScript입니다!';
+   console.log("sayhello()함수실행완료")
+ //DOM body영역  . ID요소중에 가져옴     HTML로 넣어라 = ""; 안에는 태그
+ }// {}안에는 파라미터 , 함수 블럭
+ </script>
+</body>
+</html>
+
+<!--안에서 console.log 찍어서 F12콘솔에서 작동잘하는지 확인 -->
+개발 팁: 콘솔은 JavaScript 개발자의 가장 친한 친구입니다! 코드를 테스트하고 디버깅할 때 자주 사용하게 될 거예요.
+<!--
+핵심 포인트
+JavaScript는 웹페이지에 동적인 기능을 추가하는 프로그래밍 언어
+HTML(구조) + CSS(스타일) + JavaScript(동작) = 완전한 웹페이지
+브라우저 콘솔은 JavaScript 실험과 디버깅의 필수 도구
+document.getElementById()로 HTML 요소를 조작할 수 있음-->
