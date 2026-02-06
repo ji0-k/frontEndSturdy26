@@ -1,9 +1,11 @@
 # frontEndSturdy26
 html, CSS, js, bootstrap 학습용
 
-
+소설HTML,CSS,JS
 https://wikidocs.net/book/17968
 
+소설2 bootstrap, Jquery
+https://wikidocs.net/book/17969
 
 오전 9:38 2026-02-03
 mysql 트리거 p331
