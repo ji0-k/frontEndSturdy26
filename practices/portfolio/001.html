@@ -1,0 +1,147 @@
+<!--반응형 웹사이트-->
+<!--Grid system -->
+<!--
+반응형 중단점(Breakpoint)은 이러한 변화가 일어나는 기준점입니다:
+- xs (Extra Small): 576px 미만 - 스마트폰
+- sm (Small): 576px 이상 - 큰 스마트폰
+- md (Medium): 768px 이상 - 태블릿
+- lg (Large): 992px 이상 - 작은 데스크톱
+- xl (Extra Large): 1200px 이상 - 큰 데스크톱
+- xxl (Extra Extra Large): 1400px 이상 - 매우 큰 화면-->
+<!--
+히어로 섹션(대문)
+자기소개
+기술 스택
+프로젝트 갤러리
+연락처
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 섹션별 최소 높이 설정 */
+        section {
+            padding: 60px 0;
+        }
+
+        /* 히어로 섹션 스타일 : 메인페이지 상단의 큰배너 */
+        .hero {
+            background: linear-gradient(180deg, #f0f1f3 0%, #000209 100%);
+            /*배경 : 대각선 그라이데션 왼쪽위 회색~오른쪽아래 검정색*/
+            /*180deg : 180도로 그라데이션 진행*/
+            color: #f0f1f3;
+            /*글자색*/
+            min-height: 100vh;
+            /*min-height 최소높이: 100vh: 화면 전체 높이를 차지 (스크롤 없이 딱 한 화면)*/
+            display: flex;
+            /*flex박스 사용(내부요소 배치용)*/
+            align-items: center;
+            /*내부요소 세로 중앙에 배치*/
+            /*display: flex + align-items: center: 내용물을 세로 가운데 정렬*/
+        }
+
+        /* 프로젝트 카드 호버 효과 */
+        .project-card {
+            transition: transform 0.3s ease;
+        } /*변화가 일어날때(transform) 부드럽게 애니메이션 (.3초동안) */
+          /* ease : 천천히 ~ 빠르게 ~ 천천히 그외 .txt찾아보기 */
+
+
+        .project-card:hover {
+            transform: translateY(-80px);
+        } /*마우스 올렸을때(hover) */
+          /*translateY(-10px): Y축(세로)으로 -10px 이동 = 위로 10px 올라감*/
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+    <!--navbar : 네비게이션 바 컴포넌트 -->
+    <!--navbar-expand-lg : 큰화면 992px이상에서 가로로 / 작은화면 햄벅-->
+    <!--navbar-dark : 어두운 배경용 스타일(글자를 밝은색으로..)-->
+    <!--bg-dark : 배경 검정 -->
+    <!--fixed-top : 화면 맨 위에 고정 (스크롤해도 따라옴)-->
+        <div class="container">
+        <!-- container: 내용을 가운데 정렬하고 적절한 여백 제공 -->
+            <a class="navbar-brand" href="#">PainControl</a>
+              <!-- 브랜드/로고 영역 : nav bar 좌측-->
+
+            <!--모바일 햄버거 메뉴 버튼-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+            <!-- data-bs-toggle="collapse": 클릭 시 메뉴 펼치기/접기 -->
+            <!-- data-bs-target="#navbarNav": 어떤 메뉴를 제어할지 지정 -->
+
+                <span class="navbar-toggler-icon"></span>
+                <!--햄버거 아이콘 3줄-->
+            </button>
+
+            <!-- 실제 메뉴 영역 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- collapse: 모바일에서는 숨김, 버튼 클릭 시 나타남 -->
+             <!-- navbar-collapse: 네비게이션 접기/펼치기 기능 -->
+
+                <!--메뉴목록-->
+                <ul class="navbar-nav ms-auto">
+                <!-- ms-auto: margin-start-auto, 오른쪽으로 밀어냄 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.triggerpoints.net/">The Trigger Point & Referred</a>
+                        <!-- href="#about": 같은 페이지의 #about 섹션으로 이동 -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Control">Control GUIDE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/ji0000092?igsh=YzduY3JzcWs4ZDRy">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <!--fixed-top: 스크롤해도 항상 위에 붙어있음
+            navbar-expand-lg: PC에서는 가로 메뉴, 모바일에서는 햄버거 메뉴
+            ms-auto: 메뉴를 오른쪽으로 정렬
+            href="#...": 페이지 내부 섹션으로 스크롤 이동 (앵커 링크)-->
+
+    <!-- 히어로 섹션(메인배너 영역 -->
+    <section class="hero">
+        <div class="container">
+        <!-- container: 내용을 가운데 정렬하고 적절한 여백 제공 -->
+            <div class="row">
+             <!-- row: 그리드 시스템의 가로 줄 -->
+                <div class="col-lg-8 mx-auto text-center">
+                <!-- col-lg-8: 큰 화면에서 12칸 중 8칸 차지/ 화면의 8/12(약67%)사용 가운데 배치 -->
+                <!-- mx-auto: 가로 중앙 정렬 (margin-x-auto) -->
+                <!-- text-center: 텍스트 가운데 정렬 -->
+                    <h1 class="display-3 fw-bold mb-4">About Pain Control </h1>
+                    <!-- display-3: 매우 큰 제목 스타일 -->
+                    <!-- fw-bold: font-weight bold (굵은 글씨) -->
+                    <!-- mb-4: margin-bottom 4 (아래 여백) -->
+                    <p class="lead mb-4">
+                    <!-- lead: 본문보다 약간 큰 강조 텍스트 -->
+                    <!-- mb-4: 아래 여백 -->
+                        아아아아아아픈게 젤싫엉
+                    </p>
+                    <a href="#projects" class="btn btn-light btn-lg">결제하러가기</a>
+                    <!-- btn: 버튼 기본 스타일 -->
+                    <!-- btn-light: 밝은 배경색 버튼 -->
+                    <!-- btn-lg: large 크기 버튼 -->
+                    <!-- href="#projects": 같은 페이지의 projects 섹션으로 스크롤 이동 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 부트스트랩 JavaScript 라이브러리 로드 -->
+    <!-- 버튼, 모달, 드롭다운 등의 인터랙티브 기능을 위해 필요 -->
+</body>
+</html>

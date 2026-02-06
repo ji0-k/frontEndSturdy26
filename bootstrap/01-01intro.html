@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 5 박스,컴포넌트</title>
+
+    <!-- 부트스트랩 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"><!--기본박스-->
+        <h1 class="text-center text-primary">안녕하세요, 부트스트랩!</h1><!--primary가 색상, 파란색이 기본값-->
+        <p class="lead">부트스트랩을 사용한 첫 번째 페이지입니다.</p><!--lead 회색-->
+    </div>
+
+    <!-- 부트스트랩 JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--컴포넌트-->
+     <div class="container mt-5"><!--12열로 나눈 그리드시스템-->
+         <!--컨테이너: 페이지를 감싸는 전체 박스로 가운데 정렬이기본
+         ,mt-5 5의여백위=3rem, css클래스로 만들어 놓음-->
+            <h1 class="text-center mb-4">부트스트랩 컴포넌트 체험</h1>
+                <!--mb4는 아래여백 , 4만큼의...-->
+
+            <!-- 버튼 그룹 -->
+            <div class="mb-4">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+            </div>
+
+            <!-- 알림 메시지 -->
+            <div class="alert alert-info" role="alert">
+                <strong>정보:</strong> 부트스트랩을 사용하면 이렇게 쉽게 알림 메시지를 만들 수 있습니다!
+            </div>
+
+            <!-- 카드 클래스->카드바디->-->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">카드 제목</h5>
+                    <p class="card-text">부트스트랩 카드 컴포넌트입니다. 정보를 깔끔하게 정리할 수 있어요.</p>
+                    <a href="#" class="btn btn-primary">더 보기</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
